@@ -1,5 +1,4 @@
-add_executable(day01_part1 part1.cpp)
-set_target_properties(day01_part1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
+add_executable(day-01-1 part1.cpp)
+add_executable(day-01-2 part2.cpp)
 
-add_executable(day01_part2 part2.cpp)
-set_target_properties(day01_part2 PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
+set_target_properties(day-01-1 day-01-2 PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/../execs")

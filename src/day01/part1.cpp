@@ -1,19 +1,21 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+
 #include <vector>
 #include <algorithm>
 #include <cstdlib>
 
-int main()
+int main(int argc, char* argv[])
 {
-    std::ifstream InputFile("../day-01-1.txt");
-    std::string strLine;
-
+    std::string inputFile = argv[1];
+    std::ifstream InputFile(inputFile);
+    
     std::vector<int> list1;
     std::vector<int> list2;
     int distance = 0;
 
+    std::string strLine;
     while (std::getline(InputFile, strLine))
     {
         size_t len = strLine.find(' ');

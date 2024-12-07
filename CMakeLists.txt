@@ -5,5 +5,6 @@ project(AdventOfCode2024)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# Add subdirectory for each day
 add_subdirectory(src/day01)
 # add_subdirectory(src/day02)
