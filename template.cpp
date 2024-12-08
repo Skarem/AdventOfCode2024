@@ -2,17 +2,21 @@
 #include <fstream>
 #include <string>
 
+void ReadDataFromFile(std::string filename)
+{
+    std::ifstream inputFile(filename);
+    std::string line;
+
+    while (std::getline(inputFile, line))
+    {
+        std::cout << line << std::endl;
+    }
+    inputFile.close();
+}
+
 int main(int argc, char* argv[])
 {
-    std::string inputFile = argv[1];
-    std::ifstream InputFile(inputFile);
-    
-    std::string strLine;
-    while (std::getline(InputFile, strLine))
-    {
-        std::cout << strLine << std::endl;
-    }
-    InputFile.close();
-    
+    std::string filename = argv[1];
+    ReadDataFromFile(filename);
     return 0;
 }
