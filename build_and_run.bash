@@ -64,6 +64,9 @@ run_all_executables() {
     done
 }
 
+# Clear terminal
+clear
+
 # Parse arguments
 if [ $# -eq 0 ]; then
     build_project

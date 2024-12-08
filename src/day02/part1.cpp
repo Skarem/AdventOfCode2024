@@ -30,7 +30,7 @@ bool IsSafe(const std::vector<int>& array)
     bool increasing = true;
     bool decreasing = true;
 
-    for (int i = 1; i < array.size(); i++)
+    for (size_t i = 1; i < array.size(); i++)
     {
         int diff = abs(array[i] - array[i - 1]);
         if (diff < 1 || diff > 3) return false;

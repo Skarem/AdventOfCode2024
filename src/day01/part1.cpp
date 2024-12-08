@@ -6,22 +6,30 @@
 #include <algorithm>
 #include <cstdlib>
 
+void ReadDataFromFile(const std::string filename, 
+                      std::vector<int>& list1, 
+                      std::vector<int>& list2)
+{
+    std::ifstream inputFile(filename);
+    std::string line;
+
+    while (std::getline(inputFile, line))
+    {
+        size_t len = line.find(' ');
+        list1.push_back(stoi(line.substr(0, len))); 
+        list2.push_back(stoi(line.substr(len + 1)));
+    }
+    inputFile.close();
+}
+
 int main(int argc, char* argv[])
 {
-    std::string inputFile = argv[1];
-    std::ifstream InputFile(inputFile);
-    
+    std::string filename = argv[1];
     std::vector<int> list1;
     std::vector<int> list2;
+    ReadDataFromFile(filename, list1, list2);
+    
     int distance = 0;
-
-    std::string strLine;
-    while (std::getline(InputFile, strLine))
-    {
-        size_t len = strLine.find(' ');
-        list1.push_back(stoi(strLine.substr(0, len))); 
-        list2.push_back(stoi(strLine.substr(len + 1)));
-    }
 
     std::sort(list1.begin(), list1.end());
     std::sort(list2.begin(), list2.end());
@@ -33,6 +41,5 @@ int main(int argc, char* argv[])
 
     std::cout << "Distance : " << distance << std::endl;
 
-    InputFile.close();
     return 0;
 }
