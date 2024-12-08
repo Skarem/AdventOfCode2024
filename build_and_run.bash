@@ -30,7 +30,7 @@ run_executable() {
 
     # Construct the executable name and input file
     EXECUTABLE="./execs/day-${day}-${part}.exe"
-    INPUT_FILE="./inputs/day-${day}-${part}.txt"
+    INPUT_FILE="./inputs/day-${day}.txt"
 
     # Check if the executable exists
     if [ ! -f "$EXECUTABLE" ]; then
