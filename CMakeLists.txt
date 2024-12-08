@@ -10,3 +10,5 @@ add_subdirectory(src/day01)
 add_subdirectory(src/day02)
 add_subdirectory(src/day03)
 add_subdirectory(src/day04)
+
+add_subdirectory(src/day06)
