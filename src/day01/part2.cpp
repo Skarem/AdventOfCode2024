@@ -21,6 +21,8 @@ int main(int argc, char* argv[])
         list1.push_back(stoi(strLine.substr(0, len))); 
         list2.push_back(stoi(strLine.substr(len + 1)));
     }
+    
+    InputFile.close();
 
     std::vector<int> list1_copy = list1;
 
